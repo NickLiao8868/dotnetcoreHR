@@ -1,0 +1,11 @@
+C:\Users\nick\Desktop\homework\homework\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\nick\Desktop\homework\homework\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\nick\Desktop\homework\homework\bin\Debug\netcoreapp3.1\efpt.config.json
+C:\Users\nick\Desktop\homework\homework\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\nick\Desktop\homework\homework\bin\Debug\netcoreapp3.1\homework.exe
+C:\Users\nick\Desktop\homework\homework\obj\Debug\netcoreapp3.1\homework.csprojAssemblyReference.cache
+C:\Users\nick\Desktop\homework\homework\obj\Debug\netcoreapp3.1\homework.AssemblyInfoInputs.cache
+C:\Users\nick\Desktop\homework\homework\obj\Debug\netcoreapp3.1\homework.AssemblyInfo.cs
+C:\Users\nick\Desktop\homework\homework\obj\Debug\netcoreapp3.1\homework.RazorTargetAssemblyInfo.cache
+C:\Users\nick\Desktop\homework\homework\obj\Debug\netcoreapp3.1\staticwebassets\homework.StaticWebAssets.Manifest.cache
+C:\Users\nick\Desktop\homework\homework\obj\Debug\netcoreapp3.1\staticwebassets\homework.StaticWebAssets.xml
