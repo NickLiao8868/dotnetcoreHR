@@ -23,13 +23,17 @@ namespace homework.Controllers
         [HttpGet("VwCourseStudents")]
         public async Task<ActionResult<object>> GetVwCourseStudents()
         {
-            return await _context.VwCourseStudents.ToListAsync();
+            var result = await _context.VwCourseStudents.FromSqlRaw("SELECT * FROM dbo.vwCourseStudents").ToListAsync();
+
+            return result;
         }
 
         [HttpGet("VwCourseStudentCounts")]
         public async Task<ActionResult<object>> GetVwCourseStudentCounts()
         {
-            return await _context.VwCourseStudentCount.ToListAsync();
+            var result = await _context.VwCourseStudentCount.FromSqlRaw("SELECT * FROM dbo.vwCourseStudentCount").ToListAsync();
+
+            return result;
         }
 
         // GET: api/Courses
