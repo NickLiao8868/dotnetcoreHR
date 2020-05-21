@@ -35,6 +35,8 @@ namespace homework.Models
 
                 entity.Property(e => e.CourseId).HasColumnName("CourseID");
 
+                entity.Property(e => e.DateModified).HasColumnType("datetime");
+
                 entity.Property(e => e.DepartmentId)
                     .HasColumnName("DepartmentID")
                     .HasDefaultValueSql("((1))");
@@ -81,6 +83,8 @@ namespace homework.Models
                 entity.Property(e => e.DepartmentId).HasColumnName("DepartmentID");
 
                 entity.Property(e => e.Budget).HasColumnType("money");
+
+                entity.Property(e => e.DateModified).HasColumnType("datetime");
 
                 entity.Property(e => e.InstructorId).HasColumnName("InstructorID");
 
@@ -148,6 +152,8 @@ namespace homework.Models
             modelBuilder.Entity<Person>(entity =>
             {
                 entity.Property(e => e.Id).HasColumnName("ID");
+
+                entity.Property(e => e.DateModified).HasColumnType("datetime");
 
                 entity.Property(e => e.Discriminator)
                     .IsRequired()

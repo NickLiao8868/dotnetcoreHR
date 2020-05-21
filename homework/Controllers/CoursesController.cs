@@ -67,6 +67,11 @@ namespace homework.Controllers
             {
                 return BadRequest();
             }
+            var oldcourse = await _context.Course.FindAsync(id);
+            oldcourse.Credits = course.Credits;
+            oldcourse.DateModified = DateTime.Now;
+            oldcourse.DepartmentId = course.DepartmentId;
+            oldcourse.Title = course.Title;
 
             _context.Entry(course).State = EntityState.Modified;
 

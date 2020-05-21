@@ -52,14 +52,16 @@ namespace homework.Controllers
                 return BadRequest();
             }
 
-            //_context.Entry(department).State = EntityState.Modified;
+            var olddep = await _context.Department.FindAsync(id);
+            olddep.DateModified = DateTime.Now;
+
+            _context.Entry(department).State = EntityState.Modified;
 
 
             try
             {
                 await _context.Department.FromSqlRaw("EXECUTE dbo.Department_Update {0},{1}, {2}, {3}, {4},{5}", department.DepartmentId, department.Name, department.Budget, department.StartDate, department.InstructorId, department.RowVersion).ToListAsync();
-
-                //await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {

@@ -52,6 +52,15 @@ namespace homework.Controllers
                 return BadRequest();
             }
 
+            var oldperson = await _context.Person.FindAsync(id);
+            oldperson.DateModified = DateTime.Now;
+            oldperson.Discriminator = person.Discriminator;
+            oldperson.EnrollmentDate = person.EnrollmentDate;
+            oldperson.FirstName = person.FirstName;
+            oldperson.HireDate = person.HireDate;
+            oldperson.LastName = person.LastName;
+            
+
             _context.Entry(person).State = EntityState.Modified;
 
             try
