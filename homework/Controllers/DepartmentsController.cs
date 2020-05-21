@@ -24,7 +24,7 @@ namespace homework.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Department>>> GetDepartment()
         {
-            return await _context.Department.ToListAsync();
+            return await _context.Department.Where(d => d.IsDeleted == false || d.IsDeleted == null).ToListAsync();
         }
 
         // GET: api/Departments/5
@@ -33,7 +33,7 @@ namespace homework.Controllers
         {
             var department = await _context.Department.FindAsync(id);
 
-            if (department == null)
+            if (department == null || department.IsDeleted == true)
             {
                 return NotFound();
             }
@@ -103,10 +103,12 @@ namespace homework.Controllers
             {
                 return NotFound();
             }
-            await _context.Department.FromSqlRaw("EXECUTE dbo.Department_Delete @DepartmentID", id).ToListAsync();
+            //await _context.Department.FromSqlRaw("EXECUTE dbo.Department_Delete @DepartmentID", id).ToListAsync();
 
             //_context.Department.Remove(department);
-            //await _context.SaveChangesAsync();
+            department.IsDeleted = true;
+
+            await _context.SaveChangesAsync();
 
             return department;
         }

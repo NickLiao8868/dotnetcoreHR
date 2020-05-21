@@ -24,7 +24,7 @@ namespace homework.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Person>>> GetPerson()
         {
-            return await _context.Person.ToListAsync();
+            return await _context.Person.Where(p => p.IsDeleted == false || p.IsDeleted == null).ToListAsync();
         }
 
         // GET: api/People/5
@@ -33,7 +33,7 @@ namespace homework.Controllers
         {
             var person = await _context.Person.FindAsync(id);
 
-            if (person == null)
+            if (person == null || person.IsDeleted == true)
             {
                 return NotFound();
             }
@@ -103,8 +103,8 @@ namespace homework.Controllers
             {
                 return NotFound();
             }
-
-            _context.Person.Remove(person);
+            person.IsDeleted = true;
+            //_context.Person.Remove(person);
             await _context.SaveChangesAsync();
 
             return person;
