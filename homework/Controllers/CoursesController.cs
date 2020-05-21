@@ -20,6 +20,18 @@ namespace homework.Controllers
             _context = context;
         }
 
+        [HttpGet("VwCourseStudents")]
+        public async Task<ActionResult<object>> GetVwCourseStudents()
+        {
+            return await _context.VwCourseStudents.ToListAsync();
+        }
+
+        [HttpGet("VwCourseStudentCounts")]
+        public async Task<ActionResult<object>> GetVwCourseStudentCounts()
+        {
+            return await _context.VwCourseStudentCount.ToListAsync();
+        }
+
         // GET: api/Courses
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Course>>> GetCourse()
