@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "ErikEJ.EntityFrameworkCore.DgmlBuilder/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "3.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/ErikEJ.EntityFrameworkCore.DgmlBuilder.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ErikEJ.EntityFrameworkCore.DgmlBuilder.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -2682,6 +2694,18 @@
     }
   },
   "libraries": {
+    "ErikEJ.EntityFrameworkCore.DgmlBuilder/3.1.0": {
+      "sha512": "TaPmodicBO8XnF/teZPMyA6zYg53Lz+e88zaMlqvttzf5wTxQ0sX0cECxg76ztauHSQrhaLGLIl75t1WYdf5NQ==",
+      "type": "package",
+      "path": "erikej.entityframeworkcore.dgmlbuilder/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "erikej.entityframeworkcore.dgmlbuilder.3.1.0.nupkg.sha512",
+        "erikej.entityframeworkcore.dgmlbuilder.nuspec",
+        "lib/netstandard2.0/ErikEJ.EntityFrameworkCore.DgmlBuilder.dll"
+      ]
+    },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
       "sha512": "Y4rs5aMEXY8G7wJo5S3EEt6ltqyOTr/qOeZzfn+hw/fuQj5GppGckMY5psGLETo1U9hcT5MmAhaT5xtusM1b5g==",
       "type": "package",
@@ -8582,6 +8606,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "ErikEJ.EntityFrameworkCore.DgmlBuilder >= 3.1.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.4",
       "Microsoft.EntityFrameworkCore.Sqlite >= 3.1.2",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.2",
@@ -8629,6 +8654,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "ErikEJ.EntityFrameworkCore.DgmlBuilder": {
+            "target": "Package",
+            "version": "[3.1.0, )"
+          },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[3.1.4, )"

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "B1jA96fwdyXl6CQGHQ/ntI3/GajT0GYVD/tLIfmL9IUVpxgMNZIpJAoUr+CEpsDpM3kLlbMwnuXOSLCpCcMV4Q==",
+  "dgSpecHash": "PcoWg0rTvReMsgFaWdmx31PHhOMdt6lYjUoGZSYK5NO3yKvoPpc8bub8tcvo2GRZdFAovlpk7Oy9tOejd/l4BQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\nick\\Desktop\\homework\\homework\\homework.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\nick\\.nuget\\packages\\erikej.entityframeworkcore.dgmlbuilder\\3.1.0\\erikej.entityframeworkcore.dgmlbuilder.3.1.0.nupkg.sha512",
     "C:\\Users\\nick\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\nick\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\nick\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",

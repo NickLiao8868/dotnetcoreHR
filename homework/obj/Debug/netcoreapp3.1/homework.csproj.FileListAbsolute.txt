@@ -142,8 +142,9 @@ C:\Users\nick\Desktop\homework\homework\bin\Debug\netcoreapp3.1\ru\Microsoft.Cod
 C:\Users\nick\Desktop\homework\homework\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\nick\Desktop\homework\homework\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\nick\Desktop\homework\homework\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\nick\Desktop\homework\homework\obj\Debug\netcoreapp3.1\homework.csproj.CoreCompileInputs.cache
-C:\Users\nick\Desktop\homework\homework\obj\Debug\netcoreapp3.1\homework.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\nick\Desktop\homework\homework\obj\Debug\netcoreapp3.1\homework.dll
 C:\Users\nick\Desktop\homework\homework\obj\Debug\netcoreapp3.1\homework.pdb
 C:\Users\nick\Desktop\homework\homework\obj\Debug\netcoreapp3.1\homework.genruntimeconfig.cache
+C:\Users\nick\Desktop\homework\homework\bin\Debug\netcoreapp3.1\ErikEJ.EntityFrameworkCore.DgmlBuilder.dll
+C:\Users\nick\Desktop\homework\homework\obj\Debug\netcoreapp3.1\homework.csproj.CoreCompileInputs.cache
+C:\Users\nick\Desktop\homework\homework\obj\Debug\netcoreapp3.1\homework.MvcApplicationPartsAssemblyInfo.cache

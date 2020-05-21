@@ -52,11 +52,14 @@ namespace homework.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(department).State = EntityState.Modified;
+            //_context.Entry(department).State = EntityState.Modified;
+
 
             try
             {
-                await _context.SaveChangesAsync();
+                await _context.Department.FromSqlRaw("EXECUTE dbo.Department_Update {0},{1}, {2}, {3}, {4},{5}", department.DepartmentId, department.Name, department.Budget, department.StartDate, department.InstructorId, department.RowVersion).ToListAsync();
+
+                //await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -79,8 +82,11 @@ namespace homework.Controllers
         [HttpPost]
         public async Task<ActionResult<Department>> PostDepartment(Department department)
         {
-            _context.Department.Add(department);
-            await _context.SaveChangesAsync();
+            //_context.Department.Add(department);
+
+            var result = await  _context.Department.FromSqlRaw("EXECUTE dbo.Department_Insert {0}, {1}, {2}, {3}", department.Name,department.Budget,department.StartDate,department.InstructorId).ToListAsync();
+            //await _context.SaveChangesAsync();
+
 
             return CreatedAtAction("GetDepartment", new { id = department.DepartmentId }, department);
         }
@@ -89,14 +95,16 @@ namespace homework.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Department>> DeleteDepartment(int id)
         {
+
             var department = await _context.Department.FindAsync(id);
             if (department == null)
             {
                 return NotFound();
             }
+            await _context.Department.FromSqlRaw("EXECUTE dbo.Department_Delete @DepartmentID", id).ToListAsync();
 
-            _context.Department.Remove(department);
-            await _context.SaveChangesAsync();
+            //_context.Department.Remove(department);
+            //await _context.SaveChangesAsync();
 
             return department;
         }

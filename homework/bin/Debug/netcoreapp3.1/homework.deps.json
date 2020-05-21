@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "homework/1.0.0": {
         "dependencies": {
+          "ErikEJ.EntityFrameworkCore.DgmlBuilder": "3.1.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.4",
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.2",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.2",
@@ -302,6 +303,20 @@
         },
         "compile": {
           "homework.dll": {}
+        }
+      },
+      "ErikEJ.EntityFrameworkCore.DgmlBuilder/3.1.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "3.1.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ErikEJ.EntityFrameworkCore.DgmlBuilder.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/ErikEJ.EntityFrameworkCore.DgmlBuilder.dll": {}
         }
       },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
@@ -3922,6 +3937,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "ErikEJ.EntityFrameworkCore.DgmlBuilder/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TaPmodicBO8XnF/teZPMyA6zYg53Lz+e88zaMlqvttzf5wTxQ0sX0cECxg76ztauHSQrhaLGLIl75t1WYdf5NQ==",
+      "path": "erikej.entityframeworkcore.dgmlbuilder/3.1.0",
+      "hashPath": "erikej.entityframeworkcore.dgmlbuilder.3.1.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
       "type": "package",
